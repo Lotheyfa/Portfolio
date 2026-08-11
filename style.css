@@ -1,0 +1,198 @@
+body {
+    background-color: #eee5ff;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cover {
+    text-align: center;
+    width: 100%;
+}
+
+.container {
+    width: 100%;
+}
+
+.cover h1 {
+    font-size: 50px;
+    color: #7b5ba7;
+    margin-bottom: 15px;
+}
+
+.cover p {
+    font-size: 20px;
+    color: #555;
+    margin-bottom: 50px;
+    padding: 0 20px;
+}
+
+.book-bubbles {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+}
+
+.book-bubbles a {
+    width: 220px;
+    height: 150px;
+    background-color: white;
+    border-radius: 50px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    text-decoration: none;
+    color: #7b5ba7;
+
+    font-size: 22px;
+    font-weight: bold;
+
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+
+    transition: 0.3s;
+}
+
+.book-bubbles a:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.18);
+}
+
+
+/* PAGE DESIGN */
+
+.page {
+    background-color: white;
+    width: 60%;
+    padding: 50px;
+    border-radius: 35px;
+    text-align: center;
+
+    border: 4px solid #d8c4e8;
+
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+
+    position: relative;
+}
+
+.page img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin: 20px;
+}
+
+
+/* FLOWER ANIMATION */
+
+.page::before {
+    content: "🌸";
+    position: absolute;
+    top: -25px;
+    left: -25px;
+    font-size: 45px;
+    animation: floatFlower 3s ease-in-out infinite;
+}
+
+.page::after {
+    content: "🌷";
+    position: absolute;
+    bottom: -25px;
+    right: -25px;
+    font-size: 45px;
+    animation: floatFlower 3s ease-in-out infinite;
+}
+
+@keyframes floatFlower {
+    0% {
+        transform: translateY(0px) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(-10px) rotate(5deg);
+    }
+
+    100% {
+        transform: translateY(0px) rotate(0deg);
+    }
+}
+
+
+/* 📱 MOBILE */
+
+@media (max-width: 600px) {
+
+    body {
+        min-height: 100vh;
+        padding: 30px 0;
+        box-sizing: border-box;
+    }
+
+    .cover {
+        width: 100%;
+    }
+
+    .cover h1 {
+        font-size: 36px;
+    }
+
+    .cover p {
+        font-size: 17px;
+        margin-bottom: 30px;
+    }
+
+    /* Stack the four bubbles vertically */
+    .book-bubbles {
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    .book-bubbles a {
+        width: 75%;
+        height: 100px;
+        font-size: 20px;
+        border-radius: 30px;
+    }
+
+    /* Other pages */
+    .page {
+        width: 80%;
+        padding: 30px 20px;
+        box-sizing: border-box;
+    }
+
+    .page h1 {
+        font-size: 28px;
+    }
+
+    .page p {
+        font-size: 16px;
+    }
+
+    .page img {
+        width: 180px;
+        height: 180px;
+        margin: 15px;
+    }
+
+    /* Make flowers smaller on phones */
+    .page::before {
+        font-size: 32px;
+        top: -18px;
+        left: -10px;
+    }
+
+    .page::after {
+        font-size: 32px;
+        bottom: -18px;
+        right: -10px;
+    }
+}
