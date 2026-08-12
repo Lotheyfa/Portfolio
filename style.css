@@ -232,3 +232,156 @@ body {
     text-align: left;
     padding-left: 25px;
 }
+/* ============================= */
+/* SKILLS PAGE DECORATIONS */
+/* ============================= */
+
+.page::before {
+    content: "✿";
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    font-size: 45px;
+    color: #c9a9df;
+    animation: floatFlower 3s ease-in-out infinite;
+}
+
+.page::after {
+    content: "✿";
+    position: absolute;
+    bottom: 25px;
+    right: 25px;
+    font-size: 45px;
+    color: #c9a9df;
+    animation: floatFlower 3s ease-in-out infinite;
+}
+
+
+/* Small sparkles */
+
+.page {
+    overflow: hidden;
+}
+
+.page h1::before {
+    content: "✦";
+    color: #c9a9df;
+    font-size: 25px;
+    position: absolute;
+    left: 20%;
+    top: 35%;
+    animation: sparkle 3s ease-in-out infinite;
+}
+
+.page h1::after {
+    content: "✦";
+    color: #c9a9df;
+    font-size: 25px;
+    position: absolute;
+    right: 20%;
+    top: 45%;
+    animation: sparkle 3s ease-in-out infinite;
+}
+
+
+/* Back to Cover button */
+
+.page a {
+    display: inline-block;
+
+    background-color: #dfc5f5;
+
+    color: black;
+
+    text-decoration: none;
+
+    font-size: 18px;
+    font-weight: bold;
+
+    padding: 14px 32px;
+
+    border-radius: 30px;
+
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.08);
+
+    transition: 0.3s;
+}
+
+.page a:hover {
+    background-color: #d4b3ef;
+
+    transform: translateY(-4px);
+
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+}
+
+
+/* Flower animation */
+
+@keyframes floatFlower {
+
+    0% {
+        transform: translateY(0px) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(-8px) rotate(5deg);
+    }
+
+    100% {
+        transform: translateY(0px) rotate(0deg);
+    }
+}
+
+
+/* Sparkle animation */
+
+@keyframes sparkle {
+
+    0%, 100% {
+        opacity: 0.4;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.2);
+    }
+}
+
+
+/* ============================= */
+/* MOBILE VERSION */
+/* ============================= */
+
+@media (max-width: 600px) {
+
+    .page::before {
+        top: 15px;
+        left: 15px;
+        font-size: 30px;
+    }
+
+    .page::after {
+        bottom: 15px;
+        right: 15px;
+        font-size: 30px;
+    }
+
+    .page h1::before {
+        left: 10%;
+        top: 35%;
+        font-size: 20px;
+    }
+
+    .page h1::after {
+        right: 10%;
+        top: 45%;
+        font-size: 20px;
+    }
+
+    .page a {
+        font-size: 16px;
+        padding: 12px 25px;
+    }
+}
