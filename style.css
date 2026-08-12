@@ -196,3 +196,34 @@ body {
         right: -10px;
     }
 }
+.cover::before {
+    content: "✦  ✧  ✦";
+    position: absolute;
+    top: 15%;
+    left: 10%;
+    font-size: 28px;
+    color: #c9a9df;
+    animation: sparkle 3s ease-in-out infinite;
+}
+
+.cover::after {
+    content: "✧  ✦  ✧";
+    position: absolute;
+    bottom: 15%;
+    right: 10%;
+    font-size: 28px;
+    color: #c9a9df;
+    animation: sparkle 3s ease-in-out infinite;
+}
+
+@keyframes sparkle {
+    0%, 100% {
+        opacity: 0.5;
+        transform: translateY(0);
+    }
+
+    50% {
+        opacity: 1;
+        transform: translateY(-8px);
+    }
+}
