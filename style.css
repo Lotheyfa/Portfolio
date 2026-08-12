@@ -415,3 +415,55 @@ body {
     background-color: #d4b3ef;
     transform: translateY(-4px);
 }
+#darkButton {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+
+    background-color: #f0e6ff;
+    color: #7b5ba7;
+
+    border: 2px solid #dfc5f5;
+    border-radius: 25px;
+
+    padding: 10px 18px;
+
+    font-size: 15px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.08);
+}
+.dark-mode,
+.dark-mode section {
+    background-color: #222;
+    color: white;
+}
+#darkModeButton {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+
+    background-color: #eee2fa;
+    color: #7656a3;
+
+    border: 3px solid #d4b9ee;
+    border-radius: 35px;
+
+    padding: 12px 28px;
+
+    font-size: 20px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+
+    transition: 0.3s;
+}
+
+#darkModeButton:hover {
+    transform: scale(1.05);
+    background-color: #e5d5f7;
+}
