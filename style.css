@@ -385,3 +385,33 @@ body {
         padding: 12px 25px;
     }
 }
+/* Back to Cover - Skills page */
+
+.page .back-button {
+    display: block !important;
+    width: fit-content;
+
+    margin: 40px auto 0 !important;
+
+    padding: 14px 35px;
+
+    background-color: #dfc5f5;
+    color: black;
+
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+
+    border-radius: 30px;
+
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.08);
+
+    transition: 0.3s;
+
+    clear: both;
+}
+
+.page .back-button:hover {
+    background-color: #d4b3ef;
+    transform: translateY(-4px);
+}
