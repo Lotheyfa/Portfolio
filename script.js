@@ -13,3 +13,15 @@ darkModeButton.addEventListener("click", function() {
 if (localStorage.getItem("darkMode") === "enabled") {
     document.body.classList.add("dark-mode");
 }
+const typingText = document.getElementById("typing-text");
+const text = "Hi! I am a beginner programmer learning HTML and CSS.";
+let i = 0;
+function typeWriter() {
+    typingText.innerHTML += text.charAt(i);
+    i++;
+
+    if (i < text.length) {
+        setTimeout(typeWriter, 100);
+    }
+}
+typeWriter();
